@@ -86,14 +86,14 @@ function generateCards(countries) {
 
     countries.forEach(country => {
         const cardHTML = `
-            <a class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 mb-sm-0 text-decoration-none" href="/detail.html?id=${country.id}" >
-                <div class="card border-0 shadow h-100">
+            <a class="text-decoration-none" href="/detail.html?id=${country.id}" >
+                <div class="card border-0 shadow rounded">
                     <img src="${country.image}" class="card-img-top" alt="${country.name} country image" />
-                    <div class="card-body py-5 px-4">
+                    <div class="card-body py-4 px-4">
                         <h5 class="card-title fw-bold mb-3">${country.name}</h5>
-                        <p class="card-text mb-1"><b>Population:</b>${country.population}</p>
-                        <p class="card-text mb-1"><b>Region:</b>${country.region}</p>
-                        <p class="card-text mb-1"><b>Capital:</b>${country.capital}</p>
+                        <p class="card-text mb-1"><b>Population: </b> ${country.population}</p>
+                        <p class="card-text mb-1"><b>Region: </b> ${country.region}</p>
+                        <p class="card-text mb-3"><b>Capital: </b> ${country.capital}</p>
                     </div>
                 </div>
             </a>

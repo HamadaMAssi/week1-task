@@ -91,7 +91,7 @@ function generateCards(countries) {
                     <img src="${country.image}" class="card-img-top" alt="${country.name} country image" />
                     <div class="card-body py-4 px-4">
                         <h5 class="card-title fw-bold mb-3 text-truncate">${country.name}</h5>
-                        <p class="card-text mb-1 text-truncate"><strong>Population: </strong> <span>${country.population}</span></p>
+                        <p class="card-text mb-1 text-truncate"><strong>Population: </strong> <span>${country.population.toLocaleString()}</span></p>
                         <p class="card-text mb-1 text-truncate"><strong>Region: </strong> <span>${country.region}</span></p>
                         <p class="card-text mb-3 text-truncate"><strong>Capital: </strong> <span>${country.capital}</span></p>
                     </div>
@@ -104,10 +104,3 @@ function generateCards(countries) {
 }
 
 generateCards(countries);
-
-
-// Get country by id
-function getCountryById() {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-}

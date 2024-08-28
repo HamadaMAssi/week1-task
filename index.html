@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="countries">
+    <meta name="description" content="countries" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,22 +14,26 @@
     <title>Where in the world?</title>
   </head>
   <body>
-    <header class="navbar py-4 shadow-sm">
-      <div class="container">
-        <h1 class="mb-0 font-bold fs-6 fs-md-4">Where in the world?</h1>
-      <nav>
-        <button class="btn btn-light btn-custom fs-6 fs-md-5" id="toggleDarkMode">
-          <ion-icon name="moon-outline" class="font-bold"></ion-icon
-          ><span class="font-semi-bold" id="btnText">Dark Mode</span>
-        </button>
-      </nav>
+    <header class="py-4 shadow-sm">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="mb-0 font-bold">Where in the world?</h1>
+        <nav>
+          <button
+            class="btn btn-light btn-custom d-flex align-items-center gap-2"
+            id="toggleDarkMode"
+          >
+            <ion-icon name="moon-outline" class="font-bold"></ion-icon>
+            <span class="font-semi-bold" id="btnText">Dark Mode</span>
+          </button>
+        </nav>
       </div>
     </header>
     <main class="py-4 py-md-5">
       <section class="container">
         <div class="row justify-content-between">
+          <!-- Search container -->
           <div class="col-xl-5 col-md-6 col-12">
-            <div class="search-container d-flex">
+            <div class="d-flex align-items-center search-container">
               <ion-icon name="search-outline" class="search-icon"></ion-icon>
               <input
                 type="text"
@@ -38,6 +42,7 @@
               />
             </div>
           </div>
+          <!-- dropdown for filter  -->
           <div class="col-xl-2 col-lg-3 col-md-4 col-6 mt-4 mb-2 my-md-0">
             <div class="dropdown shadow-sm rounded">
               <button
@@ -58,10 +63,8 @@
             </div>
           </div>
         </div>
-        <div
-          class="py-4 py-md-5 custom-container"
-          id="countries"
-        ></div>
+        <!-- countries container -->
+        <div class="py-4 py-md-5 px-5 px-md-0" id="countries"></div>
       </section>
     </main>
     <script src="main.js"></script>
